@@ -27,8 +27,9 @@ const config = {
   plugins: [
     new webpack.EnvironmentPlugin(["NODE_ENV"]),
     new HTMLWebpackPlugin({
-      template: path.resolve("src/index.html"),
+      template: path.resolve("src/index.hbs"),
       minify: { collapseWhitespace: true },
+      filename: "index.hbs",
     }),
   ],
 

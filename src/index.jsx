@@ -1,18 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Container from "./components/Container/Container";
-import App from "./components/App/App";
+import Container from "./common/components/Container/Container";
 
-const root = document.getElementById("root");
+function renderApp(Root) {
+  ReactDOM.render(
+    <Container>
+      <Root />
+    </Container>
+  , document.getElementById("root"));
+}
 
-ReactDOM.render(<Container><App /></Container>, root);
+renderApp(require("./common/components/Root/Root").default, root);
 
 if (module.hot) {
-  module.hot.accept("./components/App/App", () => {
+  module.hot.accept("./common/components/Root/Root", () => {
     // If you use Webpack 2 in ES modules mode, you can
     // use <App /> here rather than require() a <NextApp />.
-    const NextApp = require("./components/App/App").default;
-    ReactDOM.render(<Container><NextApp /></Container>, root);
+    renderApp(require("./common/components/Root/Root").default);
   });
 }

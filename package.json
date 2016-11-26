@@ -1,5 +1,5 @@
 {
-  "name": "react-the-boring-part",
+  "name": "react-redux-universal-boilerplate",
   "version": "0.0.0",
   "description": "Setup for React apps",
   "main": "src/index.js",

@@ -5,6 +5,7 @@ const devMiddleware = require("webpack-dev-middleware");
 const hotMiddleware = require("webpack-hot-middleware");
 const config = require("../webpack/webpack.dev.config");
 const DashboardPlugin = require("webpack-dashboard/plugin");
+const Handlebars = require("handlebars");
 
 const PORT = process.env.PORT || 8080;
 
@@ -25,8 +26,9 @@ app.use(middleware);
 app.use(hotMiddleware(compiler));
 
 app.get("*", (req, res) => {
-  res.write(middleware.fileSystem.readFileSync(path.resolve("build/index.html")));
-  res.end();
+  const file = middleware.fileSystem.readFileSync(path.resolve("build/index.hbs"));
+  const template = Handlebars.compile(file.toString());
+  res.status(200).send(template());
 });
 
 const listener = app.listen(PORT, () => {

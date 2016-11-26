@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const config = require("./webpack.config");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -11,6 +12,7 @@ const prodConfig = {
   output: config.output,
 
   plugins: [
+    new webpack.optimize.UglifyJsPlugin({ minimize: true }),
     new ExtractTextPlugin("styles.[hash].css"),
   ].concat(config.plugins),
 

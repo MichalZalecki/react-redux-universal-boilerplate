@@ -5,6 +5,7 @@ Setup for universal React apps. Working with Heroku/Dokku out of the box.
 * Webpack (dev and production configs)
 * Webpack Dashboard
 * React Hot Loader 3
+* Redux
 * Server-side rendering
 * ESLint (Airbnb config)
 * PostCSS
@@ -55,7 +56,3 @@ Run linter for `.js` and `.jsx` in `src`.
 ```bash
 npm run lint
 ```
-
-## TODO
-
-* Add Redux

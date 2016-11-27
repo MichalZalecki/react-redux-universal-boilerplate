@@ -1,10 +1,6 @@
-import React, { PropTypes } from "react";
+import React from "react";
 
 class DocumentsPage extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-  };
-
   render() {
     return (
       <div>

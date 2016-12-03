@@ -1,4 +1,5 @@
 import React, { PropTypes } from "react";
+import cls from "./UsersPage.css";
 
 class UsersPage extends React.Component {
   static propTypes = {
@@ -8,7 +9,7 @@ class UsersPage extends React.Component {
   render() {
     return (
       <div>
-        <h1>Users page</h1>
+        <h1 className={cls.title}>Users page</h1>
       </div>
     );
   }

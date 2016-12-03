@@ -7,7 +7,8 @@ const devConfig = {
   entry: [
     "react-hot-loader/patch",
     "webpack-hot-middleware/client?reload=true",
-  ].concat(config.entry),
+    ...config.entry,
+  ],
 
   output: config.output,
 
@@ -16,21 +17,15 @@ const devConfig = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-  ].concat(config.plugins),
+    ...config.plugins,
+  ],
 
   module: {
-    loaders: [
-      { test: /\.css$/,
-        loaders: [
-          "style",
-          "css?sourceMap&localIdentName=[local]---[hash:base64:5]&importLoaders=1",
-          "postcss",
-        ],
-      },
-    ].concat(config.module.loaders),
+    rules: [
+      { test: /\.css$/, loader: "style-loader!css-loader" },
+      ...config.module.rules,
+    ],
   },
-
-  postcss: config.postcss,
 };
 
 module.exports = devConfig;

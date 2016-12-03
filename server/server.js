@@ -1,5 +1,6 @@
+require("ignore-styles");
 require("babel-register")({
-  presets: ["es2015", "stage-0", "react"],
+  presets: ["es2015", "stage-2", "react"],
 });
 
 const React = require("react");

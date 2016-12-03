@@ -2,13 +2,22 @@
 
 Setup for universal React apps. Working with Heroku/Dokku out of the box.
 
-* Webpack (dev and production configs)
-* Webpack Dashboard
-* React Hot Loader 3
-* Redux
-* Server-side rendering
-* ESLint (Airbnb config)
-* PostCSS
+## Batteries Included
+
+* **Webpack 2** (dev and production configs)
+* **Webpack Dashboard**
+* **React Hot Loader 3**
+* **Redux**
+* **Server-Side Rendering**
+* **ESLint** (Airbnb config)
+
+## What's not included
+
+Choose according to your preference
+
+* Side effects middleware for Redux
+* Testing framework
+* CSS preprocesor
 
 ## Installation
 
@@ -38,7 +47,7 @@ PORT=5000 npm start
 PORT=8081 npm run start:dev
 ```
 
-Start **express with webpack-dev-middleware and webpack-dashboard** (for SWAG).
+Start **express with webpack-dev-middleware and webpack-dashboard**.
 
 ```bash
 npm run start:dashboard

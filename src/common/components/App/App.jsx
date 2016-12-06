@@ -1,13 +1,17 @@
-import React, { PropTypes } from "react";
+import React, { Component, PropTypes } from "react";
+import { Link } from "react-router";
 
-class App extends React.Component {
+class App extends Component {
   static propTypes = {
     children: PropTypes.node,
   };
 
   render() {
     return (
-      <div>{this.props.children}</div>
+      <div>
+        <Link to="/">Documents</Link> | <Link to="/users">Users</Link>
+        <div>{this.props.children}</div>
+      </div>
     );
   }
 }

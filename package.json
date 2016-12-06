@@ -29,6 +29,7 @@
     "express-handlebars": "^3.0.0",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
     "html-webpack-plugin": "^2.24.1",
+    "ignore-styles": "^5.0.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-hot-loader": "^3.0.0-beta.6",

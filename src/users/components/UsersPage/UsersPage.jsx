@@ -1,7 +1,7 @@
-import React, { PropTypes } from "react";
+import React, { Component, PropTypes } from "react";
 import cls from "./UsersPage.css";
 
-class UsersPage extends React.Component {
+class UsersPage extends Component {
   static propTypes = {
     children: PropTypes.node,
   };

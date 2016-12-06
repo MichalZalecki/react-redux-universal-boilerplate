@@ -37,7 +37,7 @@ app.get("*", (req, res) => {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search);
     } else if (renderProps) {
       const preloadedState = undefined; // to let reducers set default state/request API otherwise
-      const head = `<script>window.__PRELOADED_STATE__=${JSON.stringify(preloadedState)}</script>`;
+      const head = `<script>window.__PRELOADED_STATE__=${JSON.stringify(preloadedState)};</script>`;
       const store = createStore(rootReducer, preloadedState);
       const reactHtml = renderToString(
         React.createElement(Provider, { store }, routerContext(renderProps))

@@ -3,9 +3,9 @@ const express = require("express");
 const webpack = require("webpack");
 const devMiddleware = require("webpack-dev-middleware");
 const hotMiddleware = require("webpack-hot-middleware");
+const Handlebars = require("handlebars");
 const config = require("../webpack/webpack.dev.config");
 const DashboardPlugin = require("webpack-dashboard/plugin");
-const Handlebars = require("handlebars");
 
 const PORT = process.env.PORT || 8080;
 

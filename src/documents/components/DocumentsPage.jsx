@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 
-class DocumentsPage extends React.Component {
+class DocumentsPage extends Component {
   render() {
     return (
       <div>

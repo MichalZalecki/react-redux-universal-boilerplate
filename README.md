@@ -7,6 +7,7 @@ Setup for universal React apps. Working with Heroku/Dokku out of the box.
 * **Webpack 2** (dev and production configs)
 * **Webpack Dashboard**
 * **React Hot Loader 3**
+* **React Router 3**
 * **Redux**
 * **Server-Side Rendering**
 * **ESLint** (Airbnb config)

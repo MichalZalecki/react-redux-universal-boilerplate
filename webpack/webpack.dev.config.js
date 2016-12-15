@@ -4,6 +4,8 @@ const config = require("./webpack.config");
 const devConfig = {
   devtool: "eval",
 
+  performance: { hints: false },
+
   entry: [
     "react-hot-loader/patch",
     "webpack-hot-middleware/client?reload=true",

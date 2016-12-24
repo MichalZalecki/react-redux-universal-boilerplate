@@ -1,6 +1,8 @@
 const webpack = require("webpack");
 const config = require("./webpack.config");
 
+const LOCAL_IDENT_NAME = "[local]_[hash:base64:4]";
+
 const devConfig = {
   devtool: "eval",
 
@@ -24,7 +26,7 @@ const devConfig = {
 
   module: {
     rules: [
-      { test: /\.css$/, loader: "style-loader!css-loader" },
+      { test: /\.css$/, loader: `style-loader!css-loader?sourceMap&localIdentName=${LOCAL_IDENT_NAME}` },
       ...config.module.rules,
     ],
   },

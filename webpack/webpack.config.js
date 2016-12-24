@@ -1,5 +1,3 @@
-/* eslint global-require: 0 */
-
 require("dotenv").config({ silent: true });
 
 const webpack = require("webpack");
@@ -33,6 +31,7 @@ const config = {
   module: {
     rules: [
       { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader" },
+      { test: /\.(png|jpg)$/, loader: "file-loader" },
     ],
   },
 };
